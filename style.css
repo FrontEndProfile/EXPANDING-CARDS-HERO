@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card:nth-child(1) {
+  background-image: url(img/cards-img-\(1\).jpg);
+}
+.card:nth-child(2) {
+  background-image: url(img/cards-img-\(2\).jpg);
+}
+.card:nth-child(3) {
+  background-image: url(img/cards-img-\(3\).jpg);
+}
+.card:nth-child(4) {
+  background-image: url(img/cards-img-\(4\).jpg);
+}
+.card:nth-child(5) {
+  background-image: url(img/cards-img-\(5\).jpg);
+}
+.card:nth-child(6) {
+  background-image: url(img/cards-img-\(6\).jpg);
+}
+
+.card {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  border-radius: 50px;
+  position: relative;
+  flex: 0.5;
+  margin-inline: 8px;
+  transition: flex 0.7s ease-in-out;
+  cursor: pointer;
+}
+.card-tittle {
+  font-size: 24px;
+  color: white;
+  position: absolute;
+  bottom: 22px;
+  left: 22px;
+  opacity: 0;
+}
+
+.card.active {
+  flex: 5;
+}
+
+.card.active .card-tittle {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.3s;
+}
